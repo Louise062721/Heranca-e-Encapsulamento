@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,5 +45,15 @@ namespace Herança_e_encapsulamento_1
         {
             this._perimetro = 2 * Math.PI * this._raio;
         }
+
+        public String Imprimir()
+        {
+            String s = String.Format("Raio:\t\t{0}\n", this.Raio);
+            s += String.Format("Área:\t\t{0}\n", this.Area);
+            s += String.Format("Perímetro\t{0}\n", this.Perimetro);
+
+            return s;
+        }
+        
     }
 }
