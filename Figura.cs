@@ -9,7 +9,7 @@ namespace Herança_e_encapsulamento_1
     public class Figura
     {
         protected double _area; 
-        protected double _perimetro; 
+        protected double _perimetro;
 
         public double Area 
         {
