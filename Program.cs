@@ -11,48 +11,30 @@ namespace Herança_e_encapsulamento_1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Retangulo ret1 = new Retangulo(2.0, 7.8);
 
-            Console.WriteLine();
-            Console.WriteLine(ret1.Imprimir());
-           
+            List<Figura> listFig = new List<Figura>();
 
-            Console.WriteLine();
-            ret1.Altura = 27.9;
-            ret1.Largura = 2.4;
+            Retangulo ret1 = new Retangulo(2.0, 7.0);
+            listFig.Add(ret1);
 
-            Console.WriteLine();
-            Console.WriteLine(ret1.Imprimir());
+            Retangulo ret2 = new Retangulo(50.6, 918.7);
+            listFig.Add(ret2);
 
-            Console.WriteLine();
-            ret1.Altura = -87.8;
-            ret1.Largura = 29.4;
+            Circulo circ1 = new Circulo(91.0);
+            listFig.Add(circ1);
 
-            Console.WriteLine();
-            Console.WriteLine(ret1.Imprimir());
+            Circulo circ2 = new Circulo(245);
+            listFig.Add(circ2);
 
-            Console.WriteLine();
-            ret1.Altura = 2.6;
-            ret1.Largura = -22.5;
-
-            Console.WriteLine();
-            Console.WriteLine(ret1.Imprimir());
-
-            Console.WriteLine();
-            ret1.Altura = 12.3;
-            ret1.Largura = 31.2;
-
-            Console.WriteLine();
-            Console.WriteLine(ret1.Imprimir());
-
-            Console.WriteLine();
-            ret1.Altura = 12.3;
-            ret1.Largura = 31.2;
-
-            Console.WriteLine();
-            Console.WriteLine(ret1.Imprimir());
+            foreach (var fig in listFig)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Área:\t\t{0}", fig.Area);
+                Console.WriteLine("Perímetro:\t{0}", fig.Perimetro);
+            }
 
             Console.ReadKey();
         }
+
     }
 }
